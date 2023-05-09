@@ -15,6 +15,7 @@ jobs:
       - name: Run tests
         run: npm test
   deploy:
+    needs: test #por padrao, rodam em paralelo. Se quiser sequencial, usar needs
     runs-on: ubuntu-latest
     steps:
       - name: Get code from repository
